@@ -1,6 +1,8 @@
 HERA
 =================================
 
+*Current Version*: 0.3
+
 1. You must have this these Python packages installed:
 
     i. keyboard

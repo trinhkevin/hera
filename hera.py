@@ -110,11 +110,11 @@ def add(map, key):
   alertPressedKeys(KEYBINDS[key])
 
   if KEYBINDS[key] == "Points":
-    if key in map:
-      map[key].append(value)
+    if KEYBINDS[key] in map:
+      map[KEYBINDS[key]].append(key)
     else:
-      map[key] = []
-      map[key].append(value)
+      map[KEYBINDS[key]] = []
+      map[KEYBINDS[key]].append(key)
   else:
     if key in map:
       map[key] += 1
@@ -180,11 +180,18 @@ def handlePossession(keyboardEvent):
   
   possessionRow = []
   
+  pointsHandled = False
+
   # Appends all current possession attributes
   # and the current quarter to the file
   for keybindKey in KEYBINDS.keys():
     if keybindKey in possession:
       possessionRow.append(str(possession[keybindKey]))
+    elif KEYBINDS[keybindKey] == "Points" and "Points" in possession:
+      if pointsHandled:
+        continue
+      possessionRow.append("|".join(possession["Points"]))
+      pointsHandled = True
     else:
       possessionRow.append("0")
 
