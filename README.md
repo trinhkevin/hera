@@ -1,6 +1,15 @@
 HERA
 =================================
 
+```
+Usage: hera.py [OPTION]...
+  
+  Options:
+          -f  FILENAME
+              Filename to output the csv output (required)
+          -h  USAGE
+```
+
 *Current Version*: 0.3
 
 1. You must have this these Python packages installed:
