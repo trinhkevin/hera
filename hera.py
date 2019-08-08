@@ -128,6 +128,7 @@ def add(map, key):
   overwrittening the file
 
   @param filename
+  @return file
 '''
 def createFile(filename):
   if os.path.exists(filename):
