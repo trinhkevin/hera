@@ -7,6 +7,8 @@ HERA
 
     i. keyboard
 
+2. Since this program uses the _keyboard_ library, you must run it as the superuser.
+
 *Keybinds*:
 
 	u: Kick Outs
