@@ -65,7 +65,7 @@ def usage(exitCode = 0):
   @param frame
 '''
 def handleSigInt(signal, frame):
-  print("Hera terminated")
+  print("\nHera terminated")
   exit(0)
 
 '''
@@ -81,7 +81,7 @@ def handleSigInt(signal, frame):
 '''
 def removePlurality(string):
   if string.endswith("es"):
-    string = key[:-2]
+    string = string[:-2]
   elif string.endswith("s"):
     string = string[:-1]
 
@@ -94,7 +94,7 @@ def removePlurality(string):
   @param key
 '''
 def alertPressedKeys(key):
-  print(removePlurality(key) + " recorded")
+  print("\n" + removePlurality(key) + " recorded")
 
 '''
   Alerts that the key was pressed
@@ -201,7 +201,7 @@ def handlePossession(keyboardEvent):
 '''
 def handleQuarter(keyboardEvent):
   global quarter
-  print("Quarter: " + str(quarter))
+  print("\nQuarter: " + str(quarter))
   quarter += 1
 
 '''
